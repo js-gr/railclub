@@ -5,28 +5,41 @@
   background: #eeeeee;
 }
 
-.s-right-wrap {
+.s-right2-wrap {
   position: relative;
   max-width: 640px;
   margin: 0 auto;
 }
 
-.s-right-text {
+.s-right2-text,
+.s-right2-sub {
   position: absolute;
-  top: 20%;
-  left: 0;
   width: 100%;
+  left: 0;
   text-align: center;
   color: white;
+}
+
+.s-right2-text {
+  top: 20%;
   font-size: 5vw;
 }
 
-.swiper-slide-active .s-right-text {
+.s-right2-sub {
+  top: 55%;
+  font-size: 2vw;
+}
+
+.swiper-slide-active .s-right2-text {
   animation: slideFromRight 1.5s ease 0s 1 normal;
 }
 
-@keyframes slideFromRight {
-  0%, 25% {
+.swiper-slide-active .s-right2-sub {
+  animation: slideFromRightSub 2.0s ease 0s 1 normal;
+}
+
+@keyframes slideFromRightSub {
+  0%, 45% {
     transform: translateX(50px);
     opacity: 0;
   }
@@ -36,25 +49,28 @@
   }
 }
   </style>
-</html>
+<body>
 <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <div class="s-right-wrap">
-        <img src="img/img-640x480.gif">
-        <span class="s-right-text">slide 1</span>
+      <div class="s-right2-wrap">
+        <img src="https://static.wixstatic.com/media/97e143_80f9903bf15c48dc8a62b9fd02881cae~mv2.jpg/v1/fill/w_1399,h_719,al_c,q_85,usm_0.66_1.00_0.01/97e143_80f9903bf15c48dc8a62b9fd02881cae~mv2.webp">
+        <span class="s-right2-text">鉄道に興味がない人でも大歓迎</span>
+        <span class="s-right2-sub">鉄道に興味がなくても、「撮影が好き！」　「旅行がしたい！」などなど　多種多様な趣味の部員がおりますので、気軽に部室や運転会などに来てみてください。</span>
       </div>
     </div>
     <div class="swiper-slide">
-      <div class="s-right-wrap">
+      <div class="s-right2-wrap">
         <img src="img/img-640x480.gif">
-        <span class="s-right-text">slide 2</span>
+        <span class="s-right2-text">slide 2</span>
+        <span class="s-right2-sub">sub text 2.</span>
       </div>
     </div>
     <div class="swiper-slide">
-      <div class="s-right-wrap">
+      <div class="s-right2-wrap">
         <img src="img/img-640x480.gif">
-        <span class="s-right-text">slide 3</span>
+        <span class="s-right2-text">slide 3</span>
+        <span class="s-right2-sub">sub text 3.</span>
       </div>
     </div>
   </div>
@@ -62,4 +78,6 @@
   <div class="swiper-pagination"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-</div>
+</div>  
+</body>
+</html>
