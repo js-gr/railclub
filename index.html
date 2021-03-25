@@ -1,5 +1,41 @@
 <html>
-  
+  <style>
+    .swiper-container {
+  padding: 30px 0 50px;
+  background: #eeeeee;
+}
+
+.s-right-wrap {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.s-right-text {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 5vw;
+}
+
+.swiper-slide-active .s-right-text {
+  animation: slideFromRight 1.5s ease 0s 1 normal;
+}
+
+@keyframes slideFromRight {
+  0%, 25% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+  </style>
 </html>
 <div class="swiper-container">
   <div class="swiper-wrapper">
